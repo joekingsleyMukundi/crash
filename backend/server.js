@@ -70,6 +70,7 @@ app.use(passport.session());
 require("./passportConfig")(passport);
 
 //Passport.js login/register system
+
 app.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) throw err;
@@ -326,7 +327,7 @@ function checkNotAuthenticated(req, res, next) {
 }
 
 app.listen(4000, () => {
-
+console.log('server live at port 4000');
 });
 
 const cashout = async () => {
