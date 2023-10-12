@@ -34,11 +34,10 @@ io.on("connection", (socket) => {
   socket.on("clicked", (data) => {
   })
 })
-
 server.listen(3001, () => {
 })
 
-// Connect to MongoDB 
+//Connect to MongoDB 
 mongoose.connect(
   process.env.MONGOOSE_DB_LINK,
   {
