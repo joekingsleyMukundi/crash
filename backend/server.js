@@ -301,6 +301,7 @@ app.get('/get_chat_history', async (req, res) => {
 
 app.get('/retrieve_active_bettors_list', async (req, res) => {
   io.emit("receive_live_betting_table", JSON.stringify(live_bettors_table))
+  res.status(200).send(JSON.stringify(live_bettors_table))
   return
 })
 
